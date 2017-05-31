@@ -1,5 +1,5 @@
 <?php
-    
+    //List Networks inside an Organization
     $apikey = 'API KEY GOES HERE';
     $org = 'Organization ID goes here';
  
