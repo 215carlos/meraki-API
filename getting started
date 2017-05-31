@@ -1,0 +1,43 @@
+//API Meraki
+
+GET = https://dashboard.meraki.com/api/v0/organizations/
+
+//Headers 
+	Key = X-Cisco-Meraki-API-Key Value=API Key
+	Key= Content-Type Value= application/json
+
+//If you don’t get a 404 error, you can move on.
+
+//You will see a list of the different “organizations” you have access to, you will see them listed by ID and name. Ex:
+	  {
+    	 "id": ######, 
+   		 "name": "X Name"
+  	   },
+
+//Get Commands
+	//License State
+		https://dashboard.meraki.com/api/v0/organizations/ + organization ID/licenseState
+	//Admins:
+		https://dashboard.meraki.com/api/v0/organizations/ + organization ID/admins
+			
+	//Snmp Settings:
+		https://dashboard.meraki.com/api/v0/organizations/ + organization ID /snmp
+		
+	//Networks within the Network:
+		https://dashboard.meraki.com/api/v0/organizations/ + organization ID /networks
+		
+		//Here you will grab the networkId if you want to dig deeper in the network. Ex:
+		{
+    	   "id": " N_##################",
+ 		   "organizationId": "123827",
+ 		   "name": "X Name",
+    	   "timeZone": "US/Mountain",
+    "tags": null,
+  		  "type": "wireless"
+ 		 }
+
+		//Devices (NOT CLIENTS!) within a Network:
+		https://dashboard.meraki.com/api/v0/networks/[networkId]/devices
+		
+		//Clients within a Network
+		'https://dashboard.meraki.com/api/v0/devices/[serial]/clients?timespan=2592000'
