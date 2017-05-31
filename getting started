@@ -10,7 +10,7 @@ GET = https://dashboard.meraki.com/api/v0/organizations/
 
 //You will see a list of the different “organizations” you have access to, you will see them listed by ID and name. Ex:
 	  {
-    	 "id": ######, 
+    	 	 "id": ######, 
    		 "name": "X Name"
   	   },
 
@@ -29,7 +29,7 @@ GET = https://dashboard.meraki.com/api/v0/organizations/
 		//Here you will grab the networkId if you want to dig deeper in the network. Ex:
 		{
     	   "id": " N_##################",
- 		   "organizationId": "123827",
+ 		   "organizationId": "####",
  		   "name": "X Name",
     	   "timeZone": "US/Mountain",
     "tags": null,
